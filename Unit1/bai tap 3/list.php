@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    // unset($_SESSION['info']['125']);
+    //unset($_SESSION['info']);
     if (isset($_SESSION['info'])){
         $data_arr=$_SESSION['info'];
 

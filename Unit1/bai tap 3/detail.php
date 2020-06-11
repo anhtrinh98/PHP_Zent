@@ -1,9 +1,9 @@
 <?php 
 	session_start();
 	$malk=$_GET['malk'];
-	echo "<pre>";
-	var_dump($malk);
-	echo "<pre>";
+	// echo "<pre>";
+	// var_dump($malk);
+	// echo "<pre>";
 	if(isset($_SESSION['info'][$malk])) {
 		echo 'Mã sinh viên: ' .$_SESSION['info'][$malk]['ma']. '<br>';
 		echo "Họ và tên: " .$_SESSION['info'][$malk]['ten'].'<br>';

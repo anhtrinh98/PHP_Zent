@@ -46,11 +46,11 @@ session_start();  //Session có thể sử dụng sau khi chèn đoạn này
             else
             {
                 if (!isset( $_SESSION['info'][$ma])) {
-                    $_SESSION['info_sv'][$ma]=array(
+                    $_SESSION['info'][$ma]=array(
                         'ma'=>$ma,
                         'ten'=>$ten,
                         'phone'=>$dt,
-                        'email'=>$email,
+                        'email'=>$em,
                         'gioitinh'=>$gt,
                         'diachi'=>$dc
                     );

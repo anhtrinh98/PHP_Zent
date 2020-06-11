@@ -1,33 +1,7 @@
 <?php 
 	session_start();
-	$info=array();
-	$info[]=array(
-		'id'=>'SP1',
-		'name'=>'Iphone 4 32GB',
-		'price'=>'5000000'
-	);
-	$info[]=array(
-		'id'=>'SP2',
-		'name'=>'Ipad mini 16GB',
-		'price'=>'8000000'
-	);
-	$info[]=array(
-		'id'=>'SP3',
-		'name'=>'Iphone 5 32GB',
-		'price'=>'7000000'
-	);
-	$info[]=array(
-		'id'=>'SP4',
-		'name'=>'Iphone 6 32GB',
-		'price'=>'10000000'
-	);
-	$info[]=array(
-		'id'=>'SP5',
-		'name'=>'Iphone 6 plus 32GB',
-		'price'=>'15000000'
-	);
-	
-	$_SESSION['info']=$info;
+	//session_destroy();
+	require_once('product.php');
  ?>
 <!DOCTYPE html>
 <html>
@@ -54,14 +28,14 @@
 				<th>Hành động</th>
 			</tr>
 			<?php 
-			foreach ($info as $key=> $value) {
+			foreach ($products as $product) {
 				?>
 				<tr>
-					<td><?php echo $value['id']; ?></td>
-					<td><?php echo $value['name']; ?></td>
-					<td><?php echo $value['price']; ?></td>
+					<td><?php echo $product['id']; ?></td>
+					<td><?php echo $product['name']; ?></td>
+					<td><?php echo number_format($product['price']); ?></td>
 					<td>
-						<a href="giohang.php?code=<?php echo $value['id']; ?> " class="btn btn-danger">Add to cart</a>
+						<a href="giohang.php?code=<?php echo $product['id']; ?>" class="btn btn-danger">Add to cart</a>
 					</td>
 				</tr>
 			<?php } ?>
