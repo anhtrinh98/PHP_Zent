@@ -1,37 +1,8 @@
 <?php 
-	require_once('Connection.php');
-	class Author{
-		var $connection;
-
-		function __construct(){
-			$conn_obj = new Connection();
-			$this->connection = $conn_obj->conn;
-		}
-
-		function All(){
-		    // Cau lenh truy van co so du lieu
-		    $query = "SELECT * FROM authors";
-
-		    $data = array();
-
-		    // Thuc thi cau lenh truy van co so du lieu
-		    $result = $this->connection->query($query);
-
-		    while($row = $result->fetch_assoc()) { 
-		    	$data[] = $row;
-		    }
-
-		    return $data;
-		}
-		function find($id){
-			$query="SELECT * FROM authors where id=" .$id;
-
-			return $this->connection->query($query)-> fetch_assoc();
-		}
-		// function create($data){
-		// 	$query = "INSERT INTO authors(name,email,password,status) VALUES ('".$data['title']."','".$data['description']."')";
-
-		// 	return $this->connection->query($query);
-		// }
+	require_once('Model.php');
+	//require_once('Connection.php');
+	class Author extends Model{
+		var $table="authors";
 	}
+
  ?>

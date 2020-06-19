@@ -22,6 +22,18 @@
 					// echo "Thêm mới";
 					$controller_obj->store();
 					break;
+				case 'edit':
+					// echo "Thêm mới";
+					$controller_obj->edit();
+					break;
+					case 'update':
+					// echo "Thêm mới";
+					$controller_obj->update();
+					break;
+				case 'delete':
+					// echo "Thêm mới";
+					$controller_obj->delete();
+					break;
 				default:
 					echo "Không tồn tại action này";
 					break;
@@ -45,6 +57,18 @@
 				case 'store':
 					// echo "Thêm mới";
 					$controller_obj->store();
+					break;
+				case 'edit':
+					// echo "Thêm mới";
+					$controller_obj->edit();
+					break;
+					case 'update':
+					// echo "Thêm mới";
+					$controller_obj->update();
+					break;
+				case 'delete':
+					// echo "Thêm mới";
+					$controller_obj->delete();
 					break;
 				default:
 					echo "Không tồn tại action này";

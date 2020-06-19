@@ -16,18 +16,19 @@
 <body>
     <div class="container">
     <h3 align="center">Zent - Education And Technology Group</h3>
-    <h3 align="center">Add New Category</h3>
+    <h3 align="center">Update New Category</h3>
     <hr>
-        <form action="?mod=category&act=store" method="POST" role="form" enctype="multipart/form-data">
+        <form action="?mod=category&act=update" method="POST" role="form" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?= $cate['id'] ?>">
             <div class="form-group">
-                <label for="">Title</label>
-                <input type="text" class="form-control" id="" placeholder="" name="title">
+                <label for="">Name</label>
+                <input type="text" class="form-control" id="" placeholder="" name="title" value="<?= $cate['title'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Description</label>
-                <input type="text" class="form-control" id="" placeholder="" name="description">
+                <input type="text" class="form-control" id="" placeholder="" name="description" value="<?= $cate['description'] ?>">
             </div>
-            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
 </body>

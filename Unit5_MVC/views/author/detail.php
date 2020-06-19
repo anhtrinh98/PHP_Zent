@@ -16,10 +16,9 @@
 <body>
     <div class="container">
         <h2 align="center">Author Detail</h2>
+        <h4>ID: <?= $author['id'] ?></h4>
         <h4>Name: <?= $author['name'] ?></h4>
         <h4>Email: <?= $author['email'] ?></h4> 
-        <h4>Password: <?= $author['password'] ?></h4>
-        <h4>Status: <?= $author['status'] ?></h4>
     </div>
 </body>
 </html>
